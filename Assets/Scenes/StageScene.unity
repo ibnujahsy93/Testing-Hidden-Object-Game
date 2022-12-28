@@ -1065,6 +1065,11 @@ MonoBehaviour:
   highScore3: {fileID: 1029227985}
   highScore4: {fileID: 1855389877}
   highScore5: {fileID: 1555238636}
+  stageSelect1: {fileID: 1253178000}
+  stageSelect2: {fileID: 1913288712}
+  stageSelect3: {fileID: 1670401999}
+  stageSelect4: {fileID: 430135889}
+  stageSelect5: {fileID: 1606772464}
 --- !u!1 &982403866
 GameObject:
   m_ObjectHideFlags: 0
@@ -2470,7 +2475,7 @@ MonoBehaviour:
     m_PressedColor: {r: 0.27450982, g: 0.3137255, b: 0.30980393, a: 0.5254902}
     m_SelectedColor: {r: 0.9811321, g: 0.9811321, b: 0.9811321, a: 0}
     m_DisabledColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 0}
-    m_ColorMultiplier: 1
+    m_ColorMultiplier: 2.93
     m_FadeDuration: 0.1
   m_SpriteState:
     m_HighlightedSprite: {fileID: 0}

@@ -5,6 +5,7 @@ using UnityEngine.UI;
 using UnityEngine.EventSystems;
 using TMPro;
 using UnityEngine.SceneManagement;
+using DG.Tweening;
 
 public class HiddenObject : MonoBehaviour
 {
@@ -16,11 +17,13 @@ public class HiddenObject : MonoBehaviour
     public TextMeshProUGUI scoreTxt;
     public TextMeshProUGUI scoreFinalTxt;
     public TextMeshProUGUI timerTxt;
+    public RectTransform layerGameover;
 
     public bool timerOn = true;
     public float waktu = 120;
     public float timeRemaining;
     public int scoreNumber;
+    public Button nextButton;
     private int ite;
     [SerializeField] private AudioSource correctAudio;
     [SerializeField] private AudioSource incorrectAudio;
@@ -89,8 +92,9 @@ public class HiddenObject : MonoBehaviour
             panelGameover.SetActive(true);
             
             timerOn = false;
+            
             ScoringPoint();
-
+            layerGameover.DOMove(new Vector3(960, 500, 0), 1.5f);
         }
     }
 
@@ -166,8 +170,8 @@ public class HiddenObject : MonoBehaviour
                 scoreFinalTxt.text = "Final Score:" + scoreNumber;
                 finishGameAudio.Play();
                 panelGameover.SetActive(true);
-
-                Time.timeScale = 0;
+                layerGameover.DOMove(new Vector3(960, 500, 0), 1.5f);
+                
                 ScoringPoint();
                 
                 
@@ -200,7 +204,10 @@ public class HiddenObject : MonoBehaviour
                 Debug.Log("Score kurang dari highscore");
                 return;
             }
-
+            if (PlayerPrefs.GetInt("HighScore1") < 100)
+            {
+                nextButton.interactable = false;
+            }
         }
         else if (SceneManager.GetActiveScene().name == "GameScene2")
         {
@@ -211,6 +218,10 @@ public class HiddenObject : MonoBehaviour
             else if (scoreNumber < PlayerPrefs.GetInt("HighScore2"))
             {
                 Debug.Log("Score kurang dari highscore");
+            }
+            if (PlayerPrefs.GetInt("HighScore2") < 100)
+            {
+                nextButton.interactable = false;
             }
         }
         else if (SceneManager.GetActiveScene().name == "GameScene3")
@@ -223,6 +234,10 @@ public class HiddenObject : MonoBehaviour
             {
                 Debug.Log("Score kurang dari highscore");
             }
+            if (PlayerPrefs.GetInt("HighScore3") < 100)
+            {
+                nextButton.interactable = false;
+            }
         }
         else if (SceneManager.GetActiveScene().name == "GameScene4")
         {
@@ -233,6 +248,10 @@ public class HiddenObject : MonoBehaviour
             else if (scoreNumber < PlayerPrefs.GetInt("HighScore4"))
             {
                 Debug.Log("Score kurang dari highscore");
+            }
+            if (PlayerPrefs.GetInt("HighScore4") < 100)
+            {
+                nextButton.interactable = false;
             }
         }
         else if (SceneManager.GetActiveScene().name == "GameScene5")
