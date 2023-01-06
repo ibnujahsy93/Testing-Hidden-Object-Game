@@ -76,11 +76,24 @@ public class HiddenObject : MonoBehaviour
             waktu--;
             timeRemaining = 0;
         }
-        
-        
+
+        if (waktu <= 0 && timerOn == true && currentRound >= 1)
+        {
+            timerOn = false;
+            failAudio.Play();
+            
+        }
+        else if (waktu <= 0 && timerOn == true && currentRound == 0)
+        {
+            timerOn = false;
+            failAudio.Play();
+            
+        }
+
+
         if (waktu <= 0)
         {
-            failAudio.Play();
+            
             waktu = 0;
             scoreFinalTxt.text = "Final Score:" + scoreNumber;
             
