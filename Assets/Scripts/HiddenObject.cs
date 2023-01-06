@@ -71,21 +71,16 @@ public class HiddenObject : MonoBehaviour
         scoreTxt.text = "Score:" + scoreNumber;
         SetText();
         timeRemaining += Time.deltaTime;
-        if (timeRemaining >= 1)
+        if (timeRemaining >= 1 && timerOn == true)
         {
             waktu--;
             timeRemaining = 0;
         }
-        if (waktu <= 0 && timerOn == true && currentRound >= 1)
-        {
-            failAudio.Play();
-        }
-        else if (waktu <= 0 && timerOn == true && currentRound == 0)
-        {
-            failAudio.Play();
-        }
+        
+        
         if (waktu <= 0)
         {
+            failAudio.Play();
             waktu = 0;
             scoreFinalTxt.text = "Final Score:" + scoreNumber;
             
@@ -114,6 +109,7 @@ public class HiddenObject : MonoBehaviour
             indexNumberClue[b] = a;
         }
     }
+
     
     public void ButtonObject(int numberItem)
     {
@@ -173,8 +169,9 @@ public class HiddenObject : MonoBehaviour
                 layerGameover.DOMove(new Vector3(960, 500, 0), 1.5f);
                 
                 ScoringPoint();
+                timerOn = false;
                 
-                
+
 
             }
             
