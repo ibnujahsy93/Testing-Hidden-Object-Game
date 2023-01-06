@@ -33,21 +33,25 @@ public class SavedScore : MonoBehaviour
         {
             stageSelect2.interactable = false;
             background1.SetActive(true);
+            highScore2.enabled = false;
         }
         if (PlayerPrefs.GetInt("HighScore2") < 100)
         {
             stageSelect3.interactable = false;
             background2.SetActive(true);
+            highScore3.enabled = false;
         }
         if (PlayerPrefs.GetInt("HighScore3") < 100)
         {
             stageSelect4.interactable = false;
             background3.SetActive(true);
+            highScore4.enabled = false;
         }
         if (PlayerPrefs.GetInt("HighScore4") < 100)
         {
             stageSelect5.interactable = false;
             background4.SetActive(true);
+            highScore5.enabled = false;
         }
         
 
