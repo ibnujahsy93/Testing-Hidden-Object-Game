@@ -29,47 +29,45 @@ public class SavedScore : MonoBehaviour
         highScore4.text = PlayerPrefs.GetInt("HighScore4").ToString();
         highScore5.text = PlayerPrefs.GetInt("HighScore5").ToString();
         
-        Score1 = gameObject.AddComponent <highScore1> ();
+        
 
         if (PlayerPrefs.GetInt("HighScore1") < 100)
         {
             stageSelect2.interactable = false;
             background1.SetActive(true);
-<<<<<<< Updated upstream
+
             highScore2.enabled = false;
-=======
-            Score1.SetActive(false);
->>>>>>> Stashed changes
+
+            
+
         }
         if (PlayerPrefs.GetInt("HighScore2") < 100)
         {
             stageSelect3.interactable = false;
             background2.SetActive(true);
-<<<<<<< Updated upstream
+
             highScore3.enabled = false;
-=======
-            
->>>>>>> Stashed changes
+
+
         }
         if (PlayerPrefs.GetInt("HighScore3") < 100)
         {
             stageSelect4.interactable = false;
             background3.SetActive(true);
-<<<<<<< Updated upstream
+
             highScore4.enabled = false;
-=======
+
             
->>>>>>> Stashed changes
+
         }
         if (PlayerPrefs.GetInt("HighScore4") < 100)
         {
             stageSelect5.interactable = false;
             background4.SetActive(true);
-<<<<<<< Updated upstream
+
             highScore5.enabled = false;
-=======
-            
->>>>>>> Stashed changes
+  
+
         }
         
 
