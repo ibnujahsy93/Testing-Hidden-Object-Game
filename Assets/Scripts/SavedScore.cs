@@ -15,6 +15,10 @@ public class SavedScore : MonoBehaviour
     public Button stageSelect3;
     public Button stageSelect4;
     public Button stageSelect5;
+    public GameObject background1;
+    public GameObject background2;
+    public GameObject background3;
+    public GameObject background4;
 
     // Start is called before the first frame update
     void Start()
@@ -28,18 +32,22 @@ public class SavedScore : MonoBehaviour
         if (PlayerPrefs.GetInt("HighScore1") < 100)
         {
             stageSelect2.interactable = false;
+            background1.SetActive(true);
         }
         if (PlayerPrefs.GetInt("HighScore2") < 100)
         {
             stageSelect3.interactable = false;
+            background2.SetActive(true);
         }
         if (PlayerPrefs.GetInt("HighScore3") < 100)
         {
             stageSelect4.interactable = false;
+            background3.SetActive(true);
         }
         if (PlayerPrefs.GetInt("HighScore4") < 100)
         {
             stageSelect5.interactable = false;
+            background4.SetActive(true);
         }
         
 
