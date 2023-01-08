@@ -33,6 +33,7 @@ public class SavedScore : MonoBehaviour
 
         if (PlayerPrefs.GetInt("HighScore1") < 100)
         {
+            highScore1.color = Color.white;
             stageSelect2.interactable = false;
             background1.SetActive(true);
 
@@ -43,6 +44,7 @@ public class SavedScore : MonoBehaviour
         }
         if (PlayerPrefs.GetInt("HighScore2") < 100)
         {
+            highScore2.color = Color.white;
             stageSelect3.interactable = false;
             background2.SetActive(true);
 
@@ -52,6 +54,7 @@ public class SavedScore : MonoBehaviour
         }
         if (PlayerPrefs.GetInt("HighScore3") < 100)
         {
+            highScore3.color = Color.white;
             stageSelect4.interactable = false;
             background3.SetActive(true);
 
@@ -60,8 +63,9 @@ public class SavedScore : MonoBehaviour
             
 
         }
-        if (PlayerPrefs.GetInt("HighScore4") < 100)
+        if (PlayerPrefs.GetInt("HighScore4") < 150)
         {
+            highScore4.color = Color.white;
             stageSelect5.interactable = false;
             background4.SetActive(true);
 
@@ -69,7 +73,12 @@ public class SavedScore : MonoBehaviour
   
 
         }
-        
+        if (PlayerPrefs.GetInt("HighScore5") < 150)
+        {
+            highScore5.color = Color.white;
+
+        }
+
 
     }
 

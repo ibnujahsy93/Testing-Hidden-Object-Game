@@ -77,18 +77,31 @@ public class HiddenObject : MonoBehaviour
             timeRemaining = 0;
         }
 
-        if (waktu <= 0 && timerOn == true && currentRound >= 1)
+        if (waktu <= 0 && timerOn == true && scoreNumber < 100 && totalRound == 5)
         {
             timerOn = false;
             failAudio.Play();
             
         }
-        else if (waktu <= 0 && timerOn == true && currentRound == 0)
+        else if (waktu <= 0 && timerOn == true && scoreNumber >=100 && totalRound == 5)
+        {
+            timerOn = false;
+            finishGameAudio.Play();
+
+        }
+        else if (waktu <= 0 && timerOn == true && scoreNumber < 150 && totalRound == 7)
         {
             timerOn = false;
             failAudio.Play();
-            
+
         }
+        else if (waktu <= 0 && timerOn == true && scoreNumber >= 150 && totalRound == 7)
+        {
+            timerOn = false;
+            finishGameAudio.Play();
+
+        }
+
 
 
         if (waktu <= 0)
@@ -137,27 +150,27 @@ public class HiddenObject : MonoBehaviour
 
             if (waktu >= 110)
             {
-                scoreNumber += 50;
-                Debug.Log("Benar, dpt skor 50");
+                scoreNumber += 35;
+                Debug.Log("Benar, dpt skor 25");
             }
             else if (waktu >= 80)
             {
-                scoreNumber += 40;
-                Debug.Log("Benar, dpt skor 40");
+                scoreNumber += 25;
+                Debug.Log("Benar, dpt skor 20");
             }
             else if (waktu >= 60)
             {
-                scoreNumber += 30;
-                Debug.Log("Benar, dpt skor 30");
+                scoreNumber += 20;
+                Debug.Log("Benar, dpt skor 15");
             }
             else if (waktu >= 20)
             {
-                scoreNumber += 20;
-                Debug.Log("Benar, dpt skor 20");
+                scoreNumber += 15;
+                Debug.Log("Benar, dpt skor 10");
             }
             else if (waktu >= 1)
             {
-                scoreNumber += 5;
+                scoreNumber += 10;
                 Debug.Log("Benar, dpt skor 5");
             }
             
@@ -177,7 +190,23 @@ public class HiddenObject : MonoBehaviour
                 currentRound += 1;
                 textRound.text = currentRound.ToString() + "/" + totalRound.ToString();
                 scoreFinalTxt.text = "Final Score:" + scoreNumber;
-                finishGameAudio.Play();
+                
+                if (scoreNumber <100 && totalRound == 5)
+                {
+                    failAudio.Play();
+                }
+                else if (scoreNumber >= 100 && totalRound == 5)
+                {
+                    finishGameAudio.Play();
+                }
+                else if (scoreNumber <150 && totalRound == 7)
+                {
+                    failAudio.Play();
+                }
+                else if (scoreNumber >=150 && totalRound == 7)
+                {
+                    finishGameAudio.Play();
+                }
                 panelGameover.SetActive(true);
                 layerGameover.DOMove(new Vector3(960, 500, 0), 1.5f);
                 
