@@ -7,14 +7,18 @@ using UnityEngine.SceneManagement;
 
 
 
+
+
 public class ClickControl : MonoBehaviour
 {
+    public RectTransform infoButton;
     public GameObject pausePanel;
     public GameObject optionPanel;
     public AudioSource clickSound;
+
     
 
-    // Start is called before the first frame update
+
     public void ButtonPause()
     {
         SoundClickPlay();
