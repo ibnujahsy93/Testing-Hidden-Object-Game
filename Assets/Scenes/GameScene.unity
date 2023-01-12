@@ -298,6 +298,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 36cc7ab27cf916e4290c54a1584a6973, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  infoButton: {fileID: 0}
   pausePanel: {fileID: 1179049943}
   optionPanel: {fileID: 0}
   clickSound: {fileID: 505378473}

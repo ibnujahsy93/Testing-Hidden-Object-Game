@@ -15,9 +15,133 @@ public class ClickControl : MonoBehaviour
     public GameObject pausePanel;
     public GameObject optionPanel;
     public AudioSource clickSound;
+    public GameObject[] imageStage1;
+    public GameObject[] imageStage1Question;
+    public GameObject[] descStage1;
+    public GameObject[] descStage1Question;
+    public GameObject[] imageStage2;
+    public GameObject[] imageStage2Question;
+    public GameObject[] descStage2;
+    public GameObject[] descStage2Question;
+    public GameObject[] imageStage3;
+    public GameObject[] imageStage3Question;
+    public GameObject[] descStage3;
+    public GameObject[] descStage3Question;
+    public GameObject[] imageStage4;
+    public GameObject[] imageStage4Question;
+    public GameObject[] descStage4;
+    public GameObject[] descStage4Question;
+    public GameObject[] imageStage5;
+    public GameObject[] imageStage5Question;
+    public GameObject[] descStage5;
+    public GameObject[] descStage5Question;
 
+    private void Start()
+    {
+        CheckScore();
+    }
     
+    public void CheckScore()
+    {
+        if (PlayerPrefs.GetInt("HighScore1") > 100)
+        {
+            foreach (GameObject go in imageStage1)
+            {
+                go.SetActive(true);
+            }
+            foreach (GameObject go in descStage1)
+            {
+                go.SetActive(true);
+            }
+            foreach (GameObject go in imageStage1Question)
+            {
+                go.SetActive(false);
+            }
+            foreach (GameObject go in descStage1Question)
+            {
+                go.SetActive(false);
+            }
+        }
 
+        if (PlayerPrefs.GetInt("HighScore2") > 100)
+        {
+            foreach (GameObject go in imageStage2)
+            {
+                go.SetActive(true);
+            }
+            foreach (GameObject go in descStage2)
+            {
+                go.SetActive(true);
+            }
+            foreach (GameObject go in imageStage2Question)
+            {
+                go.SetActive(false);
+            }
+            foreach (GameObject go in descStage2Question)
+            {
+                go.SetActive(false);
+            }
+        }
+
+        if (PlayerPrefs.GetInt("HighScore3") > 100)
+        {
+            foreach (GameObject go in imageStage3)
+            {
+                go.SetActive(true);
+            }
+            foreach (GameObject go in descStage3)
+            {
+                go.SetActive(true);
+            }
+            foreach (GameObject go in imageStage3Question)
+            {
+                go.SetActive(false);
+            }
+            foreach (GameObject go in descStage3Question)
+            {
+                go.SetActive(false);
+            }
+        }
+        if (PlayerPrefs.GetInt("HighScore4") > 150)
+        {
+            foreach (GameObject go in imageStage4)
+            {
+                go.SetActive(true);
+            }
+            foreach (GameObject go in descStage4)
+            {
+                go.SetActive(true);
+            }
+            foreach (GameObject go in imageStage4Question)
+            {
+                go.SetActive(false);
+            }
+            foreach (GameObject go in descStage4Question)
+            {
+                go.SetActive(false);
+            }
+        }
+        if (PlayerPrefs.GetInt("HighScore5") > 150)
+        {
+            foreach (GameObject go in imageStage5)
+            {
+                go.SetActive(true);
+            }
+            foreach (GameObject go in descStage5)
+            {
+                go.SetActive(true);
+            }
+            foreach (GameObject go in imageStage5Question)
+            {
+                go.SetActive(false);
+            }
+            foreach (GameObject go in descStage5Question)
+            {
+                go.SetActive(false);
+            }
+        }
+
+    }
 
     public void ButtonPause()
     {
