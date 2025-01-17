@@ -2519,9 +2519,30 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 36cc7ab27cf916e4290c54a1584a6973, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  infoButton: {fileID: 0}
   pausePanel: {fileID: 2106744424}
   optionPanel: {fileID: 0}
   clickSound: {fileID: 133840611}
+  imageStage1: []
+  imageStage1Question: []
+  descStage1: []
+  descStage1Question: []
+  imageStage2: []
+  imageStage2Question: []
+  descStage2: []
+  descStage2Question: []
+  imageStage3: []
+  imageStage3Question: []
+  descStage3: []
+  descStage3Question: []
+  imageStage4: []
+  imageStage4Question: []
+  descStage4: []
+  descStage4Question: []
+  imageStage5: []
+  imageStage5Question: []
+  descStage5: []
+  descStage5Question: []
 --- !u!1 &635113105
 GameObject:
   m_ObjectHideFlags: 0
@@ -8749,8 +8770,8 @@ MonoBehaviour:
     - Browser yang digunakan untuk menjelajahi internet
     numberClue: 2
   - stringObjectItem:
-    - Apa aplikasi yang dibuat oleh Robert Gaskin dan Dennis Austin yang di akusisi
-      Microsoft?
+    - Apa aplikasi Presentasi yang dibuat oleh Robert Gaskin dan Dennis Austin yang
+      di akusisi Microsoft?
     - Cari aplikasi presentasi yang rilis pada 20 April 1987
     numberClue: 3
   - stringObjectItem:

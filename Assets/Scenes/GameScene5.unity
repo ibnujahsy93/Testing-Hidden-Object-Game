@@ -772,7 +772,7 @@ MonoBehaviour:
     numberClue: 9
   - stringObjectItem:
     - Rival dari Nvidia
-    - Memproduksi Graphic Card dan Processor
+    - Brand yang memproduksi Graphic Card dan Processor
     numberClue: 10
 --- !u!4 &212292135
 Transform:

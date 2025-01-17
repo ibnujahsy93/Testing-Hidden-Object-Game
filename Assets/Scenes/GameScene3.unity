@@ -1824,7 +1824,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 0.14509805, g: 0.3137255, b: 0.2784314, a: 1}
+  m_Color: {r: 0.8392157, g: 0.56078434, b: 0, a: 1}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
@@ -6979,9 +6979,30 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 36cc7ab27cf916e4290c54a1584a6973, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  infoButton: {fileID: 0}
   pausePanel: {fileID: 135444527}
   optionPanel: {fileID: 0}
   clickSound: {fileID: 1668711976}
+  imageStage1: []
+  imageStage1Question: []
+  descStage1: []
+  descStage1Question: []
+  imageStage2: []
+  imageStage2Question: []
+  descStage2: []
+  descStage2Question: []
+  imageStage3: []
+  imageStage3Question: []
+  descStage3: []
+  descStage3Question: []
+  imageStage4: []
+  imageStage4Question: []
+  descStage4: []
+  descStage4Question: []
+  imageStage5: []
+  imageStage5Question: []
+  descStage5: []
+  descStage5Question: []
 --- !u!1 &1837480633
 GameObject:
   m_ObjectHideFlags: 0
@@ -7505,7 +7526,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: -30.066}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 335, y: 41}
+  m_AnchoredPosition: {x: 421, y: 33}
   m_SizeDelta: {x: 121.8183, y: 97.0422}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1989016251
